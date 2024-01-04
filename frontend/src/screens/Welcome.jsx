@@ -1,10 +1,13 @@
 import React from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text, TouchableOpacity } from "react-native";
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <Text>Welcome !!</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("Search")}>
+        <Text>Continue</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };

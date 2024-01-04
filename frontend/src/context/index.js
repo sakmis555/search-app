@@ -9,15 +9,8 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 
 const nullFn = () => null;
 
-let initialLoanInfo = {
-  loanId: "",
-  businessId: "",
-  customerId: "",
-  secondOwnerId: "",
-  personalDetails: null,
-  secondOwnerDetails: null,
-  businessDetails: null,
-  loanDetails: null,
+let initialUserInfo = {
+  userId: "",
 };
 
 const CustomContext = createContext({
@@ -27,19 +20,19 @@ const CustomContext = createContext({
   error: false,
   setError: nullFn,
 
-  loanInfo: initialLoanInfo,
-  setLoanInfo: nullFn,
+  userInfo: initialUserInfo,
+  setUserInfo: nullFn,
 });
 
 export const useCustomContext = () => useContext(CustomContext);
 const ContextProvider = ({ children }) => {
   const [loaderToggle, setLoaderToggle] = useState(false);
   const [errorToggle, setErrorToggle] = useState(false);
-  const [loanInformation, setLoanInformation] = useState(initialLoanInfo);
+  const [userInformation, setUserInformation] = useState(initialUserInfo);
 
   const setLoader = (bool) => setLoaderToggle(bool);
   const setError = (bool) => setErrorToggle(bool);
-  const setLoanInfo = (newLoanInfo) => setLoanInformation(newLoanInfo);
+  const setUserInfo = (newUserInfo) => setUserInformation(newUserInfo);
 
   const value = useMemo(() => {
     return {
@@ -49,11 +42,11 @@ const ContextProvider = ({ children }) => {
       error: errorToggle,
       setError,
 
-      loanInfo: loanInformation,
-      setLoanInfo,
-      initialLoanInfo,
+      userInfo: userInformation,
+      setUserInfo,
+      initialUserInfo,
     };
-  }, [loaderToggle, errorToggle, loanInformation]);
+  }, [loaderToggle, errorToggle, userInformation]);
   return (
     <CustomContext.Provider value={value}>{children}</CustomContext.Provider>
   );

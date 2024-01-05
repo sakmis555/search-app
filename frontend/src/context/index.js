@@ -11,6 +11,15 @@ const nullFn = () => null;
 
 let initialUserInfo = {
   userId: "",
+  avatarUrl: "",
+  userName: "",
+  name: "",
+  description: "",
+  followersCount: 0,
+  followingCount: 0,
+  followersUri: "",
+  followingUrl: "",
+  profileUrl: "",
 };
 
 const CustomContext = createContext({

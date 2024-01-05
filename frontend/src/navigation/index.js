@@ -19,8 +19,20 @@ const Roootnavigator = () => {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="Search" component={Search} />
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

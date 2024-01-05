@@ -14,7 +14,7 @@ const Welcome = ({ navigation }) => {
     >
       <Text
         style={{
-          color: colors.text[500],
+          color: colors.label[500],
           fontSize: 32,
           fontWeight: "700",
           marginTop: 140,
@@ -36,8 +36,8 @@ const Welcome = ({ navigation }) => {
         source={require("../assets/celebration.gif")}
         style={{
           position: "absolute",
-          width: 328,
-          height: 328,
+          width: 228,
+          height: 228,
           top: 320,
           marginBottom: 100,
         }}
@@ -58,7 +58,7 @@ const Welcome = ({ navigation }) => {
           fontSize: 20,
           fontWeight: "500",
           marginTop: 40,
-          padding: 30,
+          padding: 25,
           width: "90%",
           borderRadius: 40,
           alignItems: "center",

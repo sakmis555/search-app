@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, Text, TouchableOpacity } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity } from "react-native";
 import { useTheme } from "@react-navigation/native";
 
 const Welcome = ({ navigation }) => {
@@ -17,7 +17,7 @@ const Welcome = ({ navigation }) => {
           color: colors.text[500],
           fontSize: 32,
           fontWeight: "700",
-          marginTop: 40,
+          marginTop: 140,
         }}
       >
         Welcome !!
@@ -32,6 +32,16 @@ const Welcome = ({ navigation }) => {
       >
         Welcome to the application to search username from Github.
       </Text>
+      <Image
+        source={require("../assets/celebration.gif")}
+        style={{
+          position: "absolute",
+          width: 328,
+          height: 328,
+          top: 320,
+          marginBottom: 100,
+        }}
+      />
       <Text
         style={{
           color: colors.text[500],

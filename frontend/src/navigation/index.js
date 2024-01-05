@@ -12,7 +12,13 @@ const Roootnavigator = () => {
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator>
-        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="Search" component={Search} />
         <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
